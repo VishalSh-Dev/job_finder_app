@@ -4,7 +4,17 @@ class SearchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('Search Here'),
+      margin: EdgeInsets.all(25),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Search Here',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 26,
+              ))
+        ],
+      ),
     );
   }
 }
