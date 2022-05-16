@@ -5,24 +5,34 @@ class SearchCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(25),
-      height: 300,
-      width: double.maxFinite,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Text('Search Here',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 26,
-              ))
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              prefixIcon: const Icon(Icons.search_sharp),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 252, 87, 87),
+                  width: 1.0,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide(
+                  color: Colors.purple,
+                  width: 2.0,
+                ),
+              ),
+              hintText: 'Enter a search term',
+              hintStyle: TextStyle(color: Color.fromARGB(212, 61, 60, 60)),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

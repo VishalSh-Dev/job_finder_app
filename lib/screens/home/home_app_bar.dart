@@ -22,7 +22,7 @@ class HomeAppBar extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                'Vishal',
+                'Vishal Shaw',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
               )
             ],
