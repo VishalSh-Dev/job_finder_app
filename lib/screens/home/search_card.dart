@@ -16,7 +16,7 @@ class SearchCard extends StatelessWidget {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide(
-                  color: Color.fromARGB(255, 252, 87, 87),
+                  color: Color.fromARGB(241, 255, 107, 107),
                   width: 1.0,
                 ),
               ),

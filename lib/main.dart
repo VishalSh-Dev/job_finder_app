@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:job_finder_app/screens/home/home.dart';
+import 'package:job_finder_app/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Job Finder App',
         theme: ThemeData(
-          primaryColor: Color(0xFF6B6B),
-          accentColor: Color(0x2F242C),
+          primaryColor: Color.fromARGB(241, 255, 107, 107),
+          accentColor: Color.fromARGB(240, 47, 36, 44),
         ),
-        home: HomePage());
+        home: SplashScreen());
   }
 }
