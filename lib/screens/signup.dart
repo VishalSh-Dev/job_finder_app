@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:job_finder_app/reusable%20widget/socialbutton.dart';
-import 'package:job_finder_app/reusable%20widget/textField.dart';
-import 'package:job_finder_app/screens/signup.dart';
+import 'package:job_finder_app/screens/login.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+import '../reusable widget/socialbutton.dart';
+import '../reusable widget/textField.dart';
+
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _emailController = new TextEditingController();
   TextEditingController _passwordController = new TextEditingController();
-
+  TextEditingController _nameController = new TextEditingController();
+  TextEditingController _numberController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(202, 213, 212, 212),
+        elevation: 0,
+        title: Text("Sign Up"),
+      ),*/
       body: Container(
         child: Center(
             child: SingleChildScrollView(
@@ -41,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 10,
             ),
             Text(
-              "Welcome back, you\'ve been missed!",
+              "Register below with your details",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -49,6 +57,18 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 50,
             ),
+            MyTextField(
+                hint: "Name",
+                controller: _nameController,
+                inputType: TextInputType.name,
+                isPassword: false,
+                iconData: Icons.face),
+            MyTextField(
+                hint: "Phone",
+                controller: _numberController,
+                inputType: TextInputType.number,
+                isPassword: false,
+                iconData: Icons.phone_android),
             MyTextField(
               hint: "Email",
               controller: _emailController,
@@ -68,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 50,
               child: ElevatedButton(
                 child: Text(
-                  "Login",
+                  "Sign Up",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 onPressed: () {},
@@ -77,23 +97,9 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 10,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    print('Working');
-                  },
-                  child: const Text(
-                    "Forgot Password ",
-                    style: TextStyle(color: Colors.blue, fontSize: 14),
-                  ),
-                )
-              ],
-            ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 35.0),
-              child: Text("---------------OR Login With---------------"),
+              padding: const EdgeInsets.symmetric(vertical: 30.0),
+              child: Text("---------------OR Sign Up With---------------"),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -109,16 +115,16 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Dont have account yet? ",
+                  "Already have an account? ",
                   style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => SignUpPage()));
+                        MaterialPageRoute(builder: (context) => LoginPage()));
                   },
                   child: const Text(
-                    "Signup ",
+                    "Login Here ",
                     style: TextStyle(color: Colors.blue, fontSize: 14),
                   ),
                 )

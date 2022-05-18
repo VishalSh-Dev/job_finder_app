@@ -5,12 +5,14 @@ class MyTextField extends StatelessWidget {
   String hint;
   bool isPassword;
   TextInputType inputType;
+  IconData iconData;
 
   MyTextField({
     required this.hint,
     required this.controller,
     required this.inputType,
     required this.isPassword,
+    required this.iconData,
   });
 
   @override
@@ -20,6 +22,10 @@ class MyTextField extends StatelessWidget {
       child: TextField(
         controller: controller,
         decoration: InputDecoration(
+          prefixIcon: Icon(
+            iconData,
+            color: Colors.grey[700],
+          ),
           focusColor: Color.fromARGB(241, 255, 107, 107),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color.fromARGB(241, 255, 107, 107)),
