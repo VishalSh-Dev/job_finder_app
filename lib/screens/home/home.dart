@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder_app/screens/home/search_card.dart';
+import 'package:job_finder_app/screens/home/tagList.dart';
 
 import 'home_app_bar.dart';
 
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [HomeAppBar(), SearchCard()],
+          children: [HomeAppBar(), SearchCard(), TagList()],
         )
       ]),
     );

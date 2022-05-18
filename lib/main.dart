@@ -25,6 +25,6 @@ class MyApp extends StatelessWidget {
           primaryColor: Color.fromARGB(241, 255, 107, 107),
           accentColor: Color.fromARGB(240, 47, 36, 44),
         ),
-        home: SplashScreen());
+        home: HomePage());
   }
 }
