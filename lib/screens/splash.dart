@@ -34,10 +34,26 @@ class _SplashScreenState extends State<SplashScreen> {
             'assets/images/image.png',
             height: 120,
           ),
-          Text(
-            'JOBIFY',
-            style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Recruit",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                "DUCK",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           SizedBox(
             height: 20,

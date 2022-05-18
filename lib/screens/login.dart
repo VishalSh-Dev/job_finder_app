@@ -23,19 +23,32 @@ class _LoginPageState extends State<LoginPage> {
           padding: const EdgeInsets.all(30),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image.asset(
-              'assets/images/logo.jpg',
+              'assets/images/logo.png',
               height: 120,
             ),
             SizedBox(
               height: 20,
             ),
-            Text(
-              "JOBIFY",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Recruit",
+                  style: TextStyle(
+                    color: Colors.grey[800],
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Text(
+                  "DUCK",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 248, 204, 45),
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 10,
