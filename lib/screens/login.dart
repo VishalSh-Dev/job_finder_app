@@ -5,7 +5,8 @@ import 'package:job_finder_app/reusable%20widget/textField.dart';
 import 'package:job_finder_app/screens/signup.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  final VoidCallback showRegisterPage;
+  const LoginPage({Key? key, required this.showRegisterPage}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -150,10 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => SignUpPage()));
-                  },
+                  onTap: widget.showRegisterPage,
                   child: const Text(
                     "Signup ",
                     style: TextStyle(color: Colors.blue, fontSize: 14),

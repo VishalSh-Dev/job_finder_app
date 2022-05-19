@@ -1,3 +1,7 @@
+import 'dart:ffi';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:job_finder_app/screens/login.dart';
 
@@ -5,7 +9,11 @@ import '../reusable widget/socialbutton.dart';
 import '../reusable widget/textField.dart';
 
 class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+  final VoidCallback showLoginPage;
+  const SignUpPage({
+    Key? key,
+    required this.showLoginPage,
+  }) : super(key: key);
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -16,6 +24,36 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _passwordController = new TextEditingController();
   TextEditingController _nameController = new TextEditingController();
   TextEditingController _numberController = new TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    _nameController.dispose();
+    _numberController.dispose();
+    super.dispose();
+  }
+
+  Future signUp() async {
+    FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: _emailController.text.trim(),
+      password: _passwordController.text.trim(),
+    );
+    addUserData(
+      _nameController.text.trim(),
+      num.parse(_numberController.text.trim()),
+      _emailController.text.trim(),
+    );
+  }
+
+  Future addUserData(String name, num number, String email) async {
+    await FirebaseFirestore.instance.collection('users').add({
+      'Name': name,
+      'Phone': number,
+      'Email': email,
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,7 +151,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       color: Color.fromARGB(97, 136, 135, 135), width: 2),
                   alignment: Alignment.center,
                 ),
-                onPressed: () {},
+                onPressed: signUp,
               ),
             ),
             SizedBox(
@@ -141,10 +179,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => LoginPage()));
-                  },
+                  onTap: widget.showLoginPage,
                   child: const Text(
                     "Login Here ",
                     style: TextStyle(color: Colors.blue, fontSize: 14),

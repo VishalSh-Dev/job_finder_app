@@ -5,6 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:job_finder_app/screens/home/home.dart';
 import 'package:job_finder_app/screens/login.dart';
 
+import 'auth_page.dart';
+
 class MainPgae extends StatelessWidget {
   const MainPgae({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class MainPgae extends StatelessWidget {
           if (snapshot.hasData) {
             return HomePage();
           } else {
-            return LoginPage();
+            return AuthPage();
           }
         },
       ),
