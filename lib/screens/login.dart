@@ -79,10 +79,19 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               width: double.infinity,
               height: 50,
-              child: ElevatedButton(
-                child: Text(
-                  "Login",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+              child: ElevatedButton.icon(
+                icon: Icon(Icons.login_rounded),
+                label: Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  textStyle:
+                      TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  primary: Color.fromARGB(255, 255, 235, 59),
+                  onPrimary: Colors.black87,
+                  elevation: 2,
+                  shadowColor: Colors.yellow,
+                  side: BorderSide(
+                      color: Color.fromARGB(97, 136, 135, 135), width: 2),
+                  alignment: Alignment.center,
                 ),
                 onPressed: () {},
               ),

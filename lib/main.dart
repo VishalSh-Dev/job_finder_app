@@ -5,8 +5,7 @@ import 'package:job_finder_app/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() {
-  //WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -25,6 +24,6 @@ class MyApp extends StatelessWidget {
           primaryColor: Color.fromARGB(241, 255, 107, 107),
           accentColor: Color.fromARGB(240, 47, 36, 44),
         ),
-        home: HomePage());
+        home: SplashScreen());
   }
 }

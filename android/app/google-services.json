@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681375372465",
+    "project_id": "recruit-duck",
+    "storage_bucket": "recruit-duck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681375372465:android:f1636fa511a0b28571fe90",
+        "android_client_info": {
+          "package_name": "com.example.job_finder_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681375372465-gbnachfj2n86s20ea2dsekk46270nv2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc3LJtVyb7ItywsUmvN6qUsBH4hU6bLZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681375372465-gbnachfj2n86s20ea2dsekk46270nv2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
