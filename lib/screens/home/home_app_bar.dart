@@ -27,25 +27,22 @@ class HomeAppBar extends StatelessWidget {
                 user.email!,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
               ),
-              Row(
-                children: [
-                  Container(
-                    child: MaterialButton(
-                      onPressed: () {
-                        FirebaseAuth.instance.signOut();
-                      },
-                      color: Colors.yellow,
-                      child: Text("Sign Out"),
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 30, right: 10),
+                padding: EdgeInsets.only(top: 10),
+                child: MaterialButton(
+                  onPressed: () {
+                    FirebaseAuth.instance.signOut();
+                  },
+                  color: Colors.yellow,
+                  child: Text("Sign Out"),
+                  height: 30,
+                  minWidth: 2,
+                ),
+                /*margin: EdgeInsets.only(top: 30, right: 10),
                 transform: Matrix4.rotationZ(100),
                 child: Stack(
                   children: [
@@ -64,7 +61,7 @@ class HomeAppBar extends StatelessWidget {
                       ),
                     )
                   ],
-                ),
+                ),*/
               ),
               SizedBox(width: 20),
               ClipOval(
