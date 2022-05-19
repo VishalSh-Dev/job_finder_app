@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatelessWidget {
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,8 +24,21 @@ class HomeAppBar extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                'User',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                user.email!,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              Row(
+                children: [
+                  Container(
+                    child: MaterialButton(
+                      onPressed: () {
+                        FirebaseAuth.instance.signOut();
+                      },
+                      color: Colors.yellow,
+                      child: Text("Sign Out"),
+                    ),
+                  ),
+                ],
               )
             ],
           ),

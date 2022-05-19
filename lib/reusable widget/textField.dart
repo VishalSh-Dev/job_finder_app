@@ -26,9 +26,9 @@ class MyTextField extends StatelessWidget {
             iconData,
             color: Colors.grey[700],
           ),
-          focusColor: Color.fromARGB(241, 255, 107, 107),
+          focusColor: Color.fromARGB(255, 255, 213, 59),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Color.fromARGB(241, 255, 107, 107)),
+            borderSide: BorderSide(color: Color.fromARGB(255, 255, 213, 59)),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(5)),

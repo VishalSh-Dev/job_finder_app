@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:job_finder_app/reusable%20widget/socialbutton.dart';
 import 'package:job_finder_app/reusable%20widget/textField.dart';
@@ -13,6 +14,20 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = new TextEditingController();
   TextEditingController _passwordController = new TextEditingController();
+
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _emailController.text.trim(),
+      password: _passwordController.text.trim(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Color.fromARGB(97, 136, 135, 135), width: 2),
                   alignment: Alignment.center,
                 ),
-                onPressed: () {},
+                onPressed: signIn,
               ),
             ),
             SizedBox(
