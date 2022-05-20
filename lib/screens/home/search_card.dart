@@ -12,23 +12,25 @@ class SearchCard extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
             decoration: InputDecoration(
-              prefixIcon: const Icon(Icons.search_sharp),
+              filled: true,
+              fillColor: Colors.white,
+              prefixIcon: const Icon(Icons.search),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(25),
                 borderSide: BorderSide(
-                  color: Color.fromARGB(241, 255, 107, 107),
+                  color: Color.fromARGB(255, 255, 196, 0),
                   width: 1.0,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide(
-                  color: Colors.purple,
-                  width: 2.0,
+                  color: Colors.red,
+                  width: 1.0,
                 ),
               ),
               hintText: 'Enter a search term',
-              hintStyle: TextStyle(color: Color.fromARGB(212, 61, 60, 60)),
+              hintStyle: TextStyle(color: Color.fromARGB(211, 92, 92, 92)),
             ),
           ),
         ),

@@ -19,13 +19,15 @@ class HomeAppBar extends StatelessWidget {
             children: [
               Text(
                 'Welcome',
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
               ),
               SizedBox(height: 10),
               Text(
-                user.email!,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                "${user.email}",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ],
           ),

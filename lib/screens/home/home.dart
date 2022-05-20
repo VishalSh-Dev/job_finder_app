@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[90],
       body: Stack(children: [
         Row(
           children: [
@@ -19,9 +20,7 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Container(
-                color: Colors.grey.withOpacity(0.1),
-              ),
+              child: Container(),
             )
           ],
         ),

@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Job Finder App',
         theme: ThemeData(
-          primaryColor: Color.fromARGB(241, 255, 107, 107),
+          primaryColor: Color.fromARGB(240, 253, 194, 66),
           accentColor: Color.fromARGB(240, 47, 36, 44),
         ),
         home: SplashScreen());
