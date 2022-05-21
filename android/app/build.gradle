@@ -47,16 +47,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.job_finder_app"
-<<<<<<< HEAD
-<<<<<<< HEAD
         minSdkVersion 23
         targetSdkVersion 31
-=======
-=======
->>>>>>> f7f8a9c0b51d1c76c55484a616acc3c2aa92e379
-        minSdkVersion 19
-        targetSdkVersion flutter.targetSdkVersion
->>>>>>> f7f8a9c0b51d1c76c55484a616acc3c2aa92e379
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         multiDexEnabled true
