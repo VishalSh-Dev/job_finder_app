@@ -73,6 +73,7 @@ flutter:
   assets:
     - assets/images/image.png
     - assets/images/
+    - assets/images/cognizant.png
     - assets/images/google.png
     - assets/images/facebook.png
     - assets/images/logo.png
