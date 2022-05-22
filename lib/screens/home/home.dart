@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder_app/screens/applied_job.dart';
+import 'package:job_finder_app/screens/chat.dart';
 import 'package:job_finder_app/screens/home/job_list.dart';
 import 'package:job_finder_app/screens/home/search_card.dart';
 import 'package:job_finder_app/screens/home/tagList.dart';
+import 'package:job_finder_app/screens/profile.dart';
 
 import '../../reusable widget/recent_job.dart';
 import 'home_app_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final List recentJobs = [
     ['Nike', 'Web Designer', 'assets/images/nike.png', 20],
     ['Google', 'Product Dev', 'assets/images/google.png', 44],
     ['Apple', 'Software Eng', 'assets/images/apple.png', 90],
+    ['Uber', 'App Developer', 'assets/images/uber.png', 50],
+    ['Apple', 'Backend Dev', 'assets/images/oracle.png', 70],
   ];
 
   @override
@@ -42,7 +54,7 @@ class HomePage extends StatelessWidget {
               child: Text(
                 'Recently Added',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),

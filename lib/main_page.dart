@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:job_finder_app/screens/home/home.dart';
 import 'package:job_finder_app/screens/login.dart';
+import 'package:job_finder_app/screens/nav.dart';
 
 import 'auth_page.dart';
 
@@ -17,7 +18,7 @@ class MainPgae extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return HomePage();
+            return NavPage();
           } else {
             return AuthPage();
           }
