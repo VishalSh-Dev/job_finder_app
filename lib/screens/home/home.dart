@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:job_finder_app/screens/applied_job.dart';
-import 'package:job_finder_app/screens/chat.dart';
 import 'package:job_finder_app/screens/home/job_list.dart';
 import 'package:job_finder_app/screens/home/search_card.dart';
 import 'package:job_finder_app/screens/home/tagList.dart';
-import 'package:job_finder_app/screens/profile.dart';
 
 import '../../reusable widget/recent_job.dart';
 import 'home_app_bar.dart';
@@ -22,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     ['Google', 'Product Dev', 'assets/images/google.png', 44],
     ['Apple', 'Software Eng', 'assets/images/apple.png', 90],
     ['Uber', 'App Developer', 'assets/images/uber.png', 50],
-    ['Apple', 'Backend Dev', 'assets/images/oracle.png', 70],
+    ['Oracle', 'Backend Dev', 'assets/images/oracle.png', 70],
   ];
 
   @override
