@@ -109,7 +109,7 @@ class JobDetail extends StatelessWidget {
                               SizedBox(width: 10),
                               ConstrainedBox(
                                 constraints: BoxConstraints(
-                                  maxWidth: 350,
+                                  maxWidth: 300,
                                 ),
                                 child: Text(
                                   e,
