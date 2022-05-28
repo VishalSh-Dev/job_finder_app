@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_finder_app/screens/home/job_detail.dart';
 import 'package:job_finder_app/screens/home/job_item.dart';
 import 'package:job_finder_app/screens/job.dart';
 
@@ -12,7 +13,15 @@ class JobList extends StatelessWidget {
       child: ListView.separated(
           padding: EdgeInsets.symmetric(horizontal: 25),
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => JobItem(jobList[index]),
+          itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                    backgroundColor: Colors.transparent,
+                    isScrollControlled: true,
+                    context: context,
+                    builder: (context) => JobDetail(jobList[index]));
+              },
+              child: JobItem(jobList[index])),
           separatorBuilder: (_, index) => SizedBox(
                 width: 15,
               ),
