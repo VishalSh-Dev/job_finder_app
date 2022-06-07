@@ -1,6 +1,6 @@
 # job_finder_app
 
-A new Flutter project.
+RecruitDuck is a modern name for an online job board that helps applicants find jobs and aids employers in their quest to locate ideal candidates. It's simply a job application tool that allows you to apply for jobs and connect with potential employers. It’s an integral part of almost every hiring process and using them effectively will translate into qualified candidates for relatively low costs.
 
 ## Getting Started
 
